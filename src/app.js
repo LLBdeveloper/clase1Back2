@@ -28,6 +28,11 @@ app.get("/setcookie", (req, res) => {
         res.send(req.cookies)
     })
 
+    //Borrar cookie
+    app.get("/borrarcookie", (req, res) => {
+        res.clearCookie("coderCookie").send("Cookie Eliminada")
+    })
+
 //LISTEN
 app.listen(PORT, ()=> {
     displayRoutes(app)
