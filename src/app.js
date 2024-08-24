@@ -17,8 +17,16 @@ app.use(session({
     saveUnitialized: true 
 }))
 
+//Middleware de autenticacion
+function auth(req, res, next) {
+    if(req.session.user === "tinki" && req.session.admin === true) {
+        return next()
+    }
+    return res.status(401).send("Error de autenticacion")
+}
+
 //Rutas
-    //home
+    //home  
 app.get("/", (req, res) => {
     res.send("CLASE !")
 })
