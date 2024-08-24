@@ -45,6 +45,9 @@ app.get("/setcookie", (req, res) => {
     //Borrar cookie
     app.get("/borrarcookie", (req, res) => {
         res.clearCookie("coderCookie").send("Cookie Eliminada")
+        // res.clearCookie("cookieFirmada").send("Cookie Eliminada")
+
+        
     })
 
     //Enviamos una cookie firmada
