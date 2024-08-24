@@ -91,8 +91,11 @@ app.get("/setcookie", (req, res) => {
         }else {
             res.send("datos incorrectos")
         }
+    })
 
-        })
+    app.get("/privado", auth,(req, res) => {
+        res.send("si llegaste hasta aca es por que estas logeado")
+    })
 
 
 //LISTEN
