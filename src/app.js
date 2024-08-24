@@ -14,7 +14,7 @@ app.use(cookieParser(miAltaClave))
 app.use(session({
     secrete: 'secretCoder',
     resave: true, 
-    saveUnitialized: true 
+    saveUnitialized: false 
 }))
 
 //Middleware de autenticacion
